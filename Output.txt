@@ -1,0 +1,128 @@
+PS C:\Users\V V S H PAVANATEJA\AppData\Local\Programs\Microsoft VS Code> & "C:\Users\V V S H PAVANATEJA\AppData\Local\Programs\Python\Python314\python.exe" "c:/Users/V V S H PAVANATEJA/Downloads/copy_of_plant_disease_detection_using_cnn.py"
+Traceback (most recent call last):
+  File "c:\Users\V V S H PAVANATEJA\Downloads\copy_of_plant_disease_detection_using_cnn.py", line 15, in <module>
+    import kagglehub
+ModuleNotFoundError: No module named 'kagglehub'
+PS C:\Users\V V S H PAVANATEJA\AppData\Local\Programs\Microsoft VS Code> & "C:\Users\V V S H PAVANATEJA\AppData\Local\Programs\Python\Python314\python.exe" "c:/Users/V V S H PAVANATEJA/Downloads/copy_of_plant_disease_detection_using_cnn.py"
+Traceback (most recent call last):
+  File "c:\Users\V V S H PAVANATEJA\Downloads\copy_of_plant_disease_detection_using_cnn.py", line 15, in <module>
+    import kagglehub
+ModuleNotFoundError: No module named 'kagglehub'
+PS C:\Users\V V S H PAVANATEJA\AppData\Local\Programs\Microsoft VS Code> & "C:\Users\V V S H PAVANATEJA\AppData\Local\Programs\Python\Python314\python.exe" "c:/Users/V V S H PAVANATEJA/Downloads/copy_of_plant_disease_detection_using_cnn.py"
+Data source import complete.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1790231761.535510   96532 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1790231767.449641   96532 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+Found 70295 files belonging to 38 classes.
+I0000 00:00:1790231776.055237   96532 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Found 17572 files belonging to 38 classes.
+C:\Users\V V S H PAVANATEJA\AppData\Local\Programs\Python\Python314\Lib\site-packages\keras\src\layers\preprocessing\data_layer.py:95: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+C:\Users\V V S H PAVANATEJA\AppData\Local\Programs\Python\Python314\Lib\site-packages\keras\src\trainers\epoch_iterator.py:74: UserWarning: `shuffle=True` was passed, but will be ignored since the data `x` was provided as a tf.data.Dataset. The Dataset is expected to already be shuffled (via `.shuffle(buffer_size)`).
+  self.data_adapter = data_adapters.get_data_adapter(
+Epoch 1/5
+2197/2197 ━━━━━━━━━━━━━━━━━━━━ 302s 137ms/step - accuracy: 0.6708 - loss: 1.1271 - val_accuracy: 0.8499 - val_loss: 0.4920
+Epoch 2/5
+2197/2197 ━━━━━━━━━━━━━━━━━━━━ 226s 103ms/step - accuracy: 0.8851 - loss: 0.3612 - val_accuracy: 0.8627 - val_loss: 0.4412
+Epoch 3/5
+2197/2197 ━━━━━━━━━━━━━━━━━━━━ 221s 101ms/step - accuracy: 0.9330 - loss: 0.2045 - val_accuracy: 0.8663 - val_loss: 0.4630
+Epoch 4/5
+2197/2197 ━━━━━━━━━━━━━━━━━━━━ 221s 101ms/step - accuracy: 0.9567 - loss: 0.1307 - val_accuracy: 0.8874 - val_loss: 0.4034
+Epoch 5/5
+2197/2197 ━━━━━━━━━━━━━━━━━━━━ 221s 100ms/step - accuracy: 0.9672 - loss: 0.0974 - val_accuracy: 0.8654 - val_loss: 0.5616
+Model: "PlantDiseaseCNN"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ input_layer_1 (InputLayer)           │ (None, 224, 224, 3)         │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ data_augmentation (Sequential)       │ (None, 224, 224, 3)         │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ rescaling_1 (Rescaling)              │ (None, 224, 224, 3)         │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_2 (Conv2D)                    │ (None, 224, 224, 32)        │             864 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ batch_normalization                  │ (None, 224, 224, 32)        │             128 │
+│ (BatchNormalization)                 │                             │                 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ activation (Activation)              │ (None, 224, 224, 32)        │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d_2 (MaxPooling2D)       │ (None, 112, 112, 32)        │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_3 (Conv2D)                    │ (None, 112, 112, 64)        │          18,432 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ batch_normalization_1                │ (None, 112, 112, 64)        │             256 │
+│ (BatchNormalization)                 │                             │                 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ activation_1 (Activation)            │ (None, 112, 112, 64)        │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d_3 (MaxPooling2D)       │ (None, 56, 56, 64)          │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_4 (Conv2D)                    │ (None, 56, 56, 128)         │          73,728 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ batch_normalization_2                │ (None, 56, 56, 128)         │             512 │
+│ (BatchNormalization)                 │                             │                 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ activation_2 (Activation)            │ (None, 56, 56, 128)         │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d_4 (MaxPooling2D)       │ (None, 28, 28, 128)         │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_5 (Conv2D)                    │ (None, 28, 28, 256)         │         294,912 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ batch_normalization_3                │ (None, 28, 28, 256)         │           1,024 │
+│ (BatchNormalization)                 │                             │                 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ activation_3 (Activation)            │ (None, 28, 28, 256)         │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d_5 (MaxPooling2D)       │ (None, 14, 14, 256)         │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ global_average_pooling2d             │ (None, 256)                 │               0 │
+│ (GlobalAveragePooling2D)             │                             │                 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_2 (Dense)                      │ (None, 256)                 │          65,792 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dropout (Dropout)                    │ (None, 256)                 │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_3 (Dense)                      │ (None, 38)                  │           9,766 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 465,414 (1.78 MB)
+ Trainable params: 464,454 (1.77 MB)
+ Non-trainable params: 960 (3.75 KB)
+Epoch 1/5
+2197/2197 ━━━━━━━━━━━━━━━━━━━━ 0s 421ms/step - accuracy: 0.6630 - loss: 1.1165   
+Epoch 1: val_accuracy improved from None to 0.68080, saving model to /kaggle/working/best_plant_disease_model.keras
+
+Epoch 1: finished saving model to /kaggle/working/best_plant_disease_model.keras
+2197/2197 ━━━━━━━━━━━━━━━━━━━━ 971s 442ms/step - accuracy: 0.6630 - loss: 1.1165 - val_accuracy: 0.6808 - val_loss: 1.0506 - learning_rate: 0.0010
+Epoch 2/5
+2197/2197 ━━━━━━━━━━━━━━━━━━━━ 0s 452ms/step - accuracy: 0.8570 - loss: 0.4467   
+Epoch 2: val_accuracy did not improve from 0.68080
+2197/2197 ━━━━━━━━━━━━━━━━━━━━ 1043s 475ms/step - accuracy: 0.8570 - loss: 0.4467 - val_accuracy: 0.6277 - val_loss: 1.6093 - learning_rate: 0.0010
+Epoch 3/5
+2197/2197 ━━━━━━━━━━━━━━━━━━━━ 0s 529ms/step - accuracy: 0.8997 - loss: 0.3101   
+Epoch 3: val_accuracy did not improve from 0.68080
+
+Epoch 3: ReduceLROnPlateau reducing learning rate to 0.00020000000949949026.
+2197/2197 ━━━━━━━━━━━━━━━━━━━━ 1215s 553ms/step - accuracy: 0.8997 - loss: 0.3101 - val_accuracy: 0.5604 - val_loss: 2.3608 - learning_rate: 0.0010
+Epoch 4/5
+2197/2197 ━━━━━━━━━━━━━━━━━━━━ 0s 591ms/step - accuracy: 0.9486 - loss: 0.1610   
+Epoch 4: val_accuracy improved from 0.68080 to 0.85335, saving model to /kaggle/working/best_plant_disease_model.keras
+
+Epoch 4: finished saving model to /kaggle/working/best_plant_disease_model.keras
+2197/2197 ━━━━━━━━━━━━━━━━━━━━ 1353s 616ms/step - accuracy: 0.9486 - loss: 0.1610 - val_accuracy: 0.8533 - val_loss: 0.5008 - learning_rate: 2.0000e-04
+Epoch 5/5
+2197/2197 ━━━━━━━━━━━━━━━━━━━━ 0s 546ms/step - accuracy: 0.9545 - loss: 0.1389   
+Epoch 5: val_accuracy improved from 0.85335 to 0.89187, saving model to /kaggle/working/best_plant_disease_model.keras
+
+Epoch 5: finished saving model to /kaggle/working/best_plant_disease_model.keras
+2197/2197 ━━━━━━━━━━━━━━━━━━━━ 1249s 569ms/step - accuracy: 0.9545 - loss: 0.1389 - val_accuracy: 0.8919 - val_loss: 0.3461 - learning_rate: 2.0000e-04
+Restoring model weights from the end of the best epoch: 5.
+550/550 ━━━━━━━━━━━━━━━━━━━━ 44s 80ms/step - accuracy: 0.8919 - loss: 0.3461  
+Validation Loss: 0.3461
+Validation Accuracy: 0.8919
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 194ms/step
+True Label:      Grape___healthy
+Predicted Label: Grape___healthy (89.22% confidence)
+PS C:\Users\V V S H PAVANATEJA\AppData\Local\Programs\Microsoft VS Code> 
